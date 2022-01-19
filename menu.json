@@ -1,0 +1,19 @@
+{
+    "items": [
+        "Burger", {
+            "cost": 15.00,
+        },
+        "Fries", {
+            "cost": 5.00,
+        },
+        "Hot dog", {
+            "cost": 13.00,
+        },
+        "Chicken", {
+            "cost": 20.00,
+        },
+        "Steak", {
+            "cost": 30.00,
+        },
+    ],
+},
