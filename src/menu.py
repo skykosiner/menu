@@ -9,11 +9,11 @@ class Menu:
 
     def getMenu(self):
         data = [
-            ("Burger", "some description",13),
-            ("Hot dog", "some description", 13),
-            ("Chicken", "some description", 20),
-            ("Steak", "some description", 30),
-            ("French fries", "some description", 5)
+            ("Burger", 13),
+            ("Hot dog", 13),
+            ("Chicken", 20),
+            ("Steak", 30),
+            ("French fries", 5)
         ]
 
         # Print the menu with fancy json style
@@ -21,7 +21,7 @@ class Menu:
 
         # Create a dictionary of menu items
         self.items = {
-            n: MenuItem(name=n, description=d, price=p) for (n, d, p) in data
+            n: MenuItem(name=n, price=p) for (n, p) in data
         }
 
         return self.items
