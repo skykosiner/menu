@@ -3,7 +3,6 @@ import json
 
 class Menu:
     name: str
-    data: list = []
 
     def __init__(self, name: str):
         self.name = name
@@ -17,10 +16,10 @@ class Menu:
             ("French fries", "some description", 5)
         ]
 
-        self.data = data
-
+        # Print the menu with fancy json style
         print(json.dumps(data, indent=4))
 
+        # Create a dictionary of menu items
         self.items = {
             n: MenuItem(name=n, description=d, price=p) for (n, d, p) in data
         }
@@ -31,5 +30,7 @@ class Menu:
         item = input(str(f"What do you want to order {self.name}? "))
         return item
 
+    # Let the user know it is done and give them the price
     def processOrder(self, order: str):
-        print(f"You ordered {order}. The price will be ${self.items.get(order, None).price}. Thank you for your order {self.name}!")
+        price = self.items[order].price
+        print(f"You ordered {order}. The price will be ${price}. Thank you for your order {self.name}!")
