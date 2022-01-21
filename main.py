@@ -4,8 +4,8 @@ import time
 name: str = input("What is your name? ")
 
 menu = Menu(name)
-print("Enter in the name of the item you want to sellect")
-print(f"The menu options are:")
+print("Enter in the name of the item you want to select")
+print("The menu options are:")
 mainMenu = menu.getMenu()
 
 order = menu.order()
