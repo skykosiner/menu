@@ -13,7 +13,7 @@ order = menu.order()
 # If the item the user entered is not in the main menu
 if order not in mainMenu:
     print(f"Sorry, we don't have {order} in the menu.")
-    exit(0x10F2C)
+    exit(0x45)
 
 # No errors then process that order baby
 print("Your order has been placed.")
